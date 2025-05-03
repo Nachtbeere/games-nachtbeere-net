@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>밤딸기 플레이스 - 게시판</title>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="tDZ7jPtLd0gz5069A2ISTWbU5kE+Sj6fA2PCzEv4ZRbhD4zFvp00oXs9cpkNj+WfAD4Gtw8L/I6bOMM7SpEyIQ==" />
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" media="all" href="assets/application-ef9ee12f44b01e1fce6bf0dcfa58c877ab80db1bcca2e010e1e7eb3c94415827.css" data-turbolinks-track="reload" />
+    <script src="packs/js/application-cafc3bf13672f0350aea.js" data-turbolinks-track="reload"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/nachtbeere-logo-c7ced22856484b4657966ef1c3015cd9a87c5fc6620ffc3d580cfc325158344c.png" />
+      <script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="noxowl" data-description="밤딸기 운영에 힘이 되도록 피자를 보내주세요!" data-message="오늘도 밤딸기에 방문해 주셔서 감사합니다." data-color="#FF813F" data-position="right" data-x_margin="18" data-y_margin="18"></script>
+  </head>
+
+  <body>
+  <header class="top-wrap uk-position-relative">
+    <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+      <nav class="uk-navbar-container" uk-navbar>
+        <div class="uk-navbar-left">
+          <span class="site_logo"><a href="index.html">밤딸기 플레이스</a></span>
+        </div>
+        <div class="uk-navbar-right">
+          <a class="uk-navbar-toggle uk-hidden@m" href="oneline%3Farticle_id=111&amp;page=6.html#" uk-toggle="target: #mobile_menu">
+            <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
+          </a>
+          <div id="mobile_menu" uk-offcanvas="mode: reveal; overlay: true; flip: true;">
+            <div class="uk-offcanvas-bar">
+              <button class="uk-offcanvas-close" type="button" uk-close></button>
+              <ul class="uk-nav uk-nav-default">
+                <li>
+                  <a href="index.html">대문</a>
+                </li>
+                <li class="uk-parent">
+                  <a href="about.html">밤딸기</a>
+                    <ul class="uk-nav-sub">
+                      <li><a href="about.html">소개</a></li>
+                      <li><a href="notice.html">공지</a></li>
+                      <li><a href="develop.html">개발</a></li>
+                      <li><a href="donation.html">기부</a></li>
+                      <li><a href="oneline.html">게시판</a></li>
+                      <li><a href="terms-of-service.html">이용 약관</a></li>
+                    </ul>
+                </li>
+                <li class="uk-parent">
+                  <a href="minecraft.html">마인크래프트</a>
+                    <ul class="uk-nav-sub">
+                      <li><a href="minecraft/about.html">소개</a></li>
+                      <li><a href="minecraft/rules.html">규칙</a></li>
+                      <li><a href="minecraft/connect.html">접속</a></li>
+                      <li><a href="minecraft/maps.html">지도</a></li>
+                      <li><a target="_blank" href="https://wiki.minecraft.nachtbeere.net/wiki/%EB%A7%88%ED%9E%88%EC%BB%A4:%EB%8C%80%EB%AC%B8">위키⎋</a></li>
+                    </ul>
+                </li>
+                <li class="uk-parent">
+                  <a href="multiplay/about.html">다른 게임들</a>
+                    <ul class="uk-nav-sub">
+                      <li><a href="multiplay/about.html">소개</a></li>
+                      <li><a href="multiplay/ottd.html">Open TTD</a></li>
+                      <li><a href="multiplay/orct.html">Open RCT</a></li>
+                    </ul>
+                </li>
+                  <li>
+                    <a data-method="get" href="sign-in.html">로그인</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <ul class="uk-navbar-nav uk-visible@m">
+            <li>
+              <a href="index.html">대문</a>
+            </li>
+            <li>
+              <a href="about.html">밤딸기</a>
+              <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                  <li><a href="about.html">소개</a></li>
+                  <li><a href="notice.html">공지</a></li>
+                  <li><a href="develop.html">개발</a></li>
+                  <li><a href="donation.html">기부</a></li>
+                  <li><a href="oneline.html">게시판</a></li>
+                  <li><a href="terms-of-service.html">이용 약관</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="minecraft.html">마인크래프트</a>
+              <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                  <li><a href="minecraft/about.html">소개</a></li>
+                  <li><a href="minecraft/rules.html">규칙</a></li>
+                  <li><a href="minecraft/connect.html">접속</a></li>
+                  <li><a href="minecraft/maps.html">지도</a></li>
+                  <li><a target="_blank" href="https://wiki.minecraft.nachtbeere.net/wiki/%EB%A7%88%ED%9E%88%EC%BB%A4:%EB%8C%80%EB%AC%B8">위키⎋</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="multiplay/about.html">다른 게임들</a>
+              <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                  <li><a href="multiplay/about.html">소개</a></li>
+                  <li><a href="multiplay/ottd.html">Open TTD</a></li>
+                  <li><a href="multiplay/orct.html">Open RCT</a></li>
+                </ul>
+              </div>
+            </li>
+              <li>
+                <a data-uk-icon="icon: sign-in" data-method="get" href="sign-in.html"></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main id="content" class="uk-section uk-section-default">
+    <div class="uk-container uk-container-small">
+      <article class="uk-container">
+      <div class="breadcrumbs"><a href="https://games.nachtbeere.net/">Home</a><a href="about.html">밤딸기</a><span class="current">게시판</span></div>
+        <h1>게시판</h1>
+<div>
+    <fieldset class="uk-fieldset">
+      <div class="uk-margin-small">
+          <div class="uk-inline uk-width-1-1">
+            <a class="link-cover" href="sign-in.html">
+              <div></div>
+            </a>
+            <span class="uk-form-icon uk-form-icon-flip uk-icon" uk-icon="icon: comment"></span>
+            <textarea placeholder="로그인 해주세요" class="uk-textarea" disabled></textarea>
+          </div>
+      </div>
+      <div class="uk-text-right">
+        <button class="uk-button uk-button-primary" disabled>작성</button>
+      </div>
+    </fieldset>
+</div>
+
+<ul class="uk-list uk-list-divider">
+    <li id="oneline-article-14">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <img loading="lazy" class="uk-comment-avatar-modified" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--305fd06db36a8cb1568d5a72f468db1ff6d1338d/0cb522617473.png" />
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">관리자(Admin)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-09-15 23:06:05</div>
+          </header>
+          <div class="uk-comment-body">예전에 있던 기능인 따봉/보상 체계가 돌아왔습니다. 밤딸기가 등록된 사이트에서 따봉을 눌러주시면 보상으로 &#39;밤딸기 기념주화&#39; 두 개를 드립니다. 밤딸기 기념주화 9개를 모아 에메랄드 블록으로 만들어 깨면 평범한 에메랄드 화폐로 사용하실 수 있습니다. 별다른 홍보를 하지 않는 서버인 만큼 심심할 때 한 번 씩 눌러주세요. 저는 서버 주인이라 자추가 불법입니다.</div>
+            <div class="uk-grid-medium uk-child-width-expand@s" uk-grid>
+            <a class="uk-width-1-2@l uk-width-1-1@m attached-image-modal-opener" data-image-src="https://games.nachtbeere.net/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6742cff5c1676cf36e2d8f390044a9079cdfd5c7/4d90412bf33f819875f845.png">
+              <img loading="lazy" class="uk-card uk-card-default uk-card-body oneline-image-box" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6742cff5c1676cf36e2d8f390044a9079cdfd5c7/4d90412bf33f819875f845.png" />
+            </a>
+            </div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-13">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <img loading="lazy" class="uk-comment-avatar-modified" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--305fd06db36a8cb1568d5a72f468db1ff6d1338d/0cb522617473.png" />
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">관리자(Admin)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-09-15 21:27:14</div>
+          </header>
+          <div class="uk-comment-body">피치 못할 작업이 있어 서버째로 잠시 내립니다. 접속이 안 되어도 당황하지 마세요.</div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-12">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <img loading="lazy" class="uk-comment-avatar-modified" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--305fd06db36a8cb1568d5a72f468db1ff6d1338d/0cb522617473.png" />
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">관리자(Admin)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-09-11 04:47:21</div>
+          </header>
+          <div class="uk-comment-body">미리 설치된 철도는 직결 및 정차역 건설 가능합니다. 여기 적어두는 정도면 충분할 것 같네요. 주민 부분은 나중에 접속하면 확인해 보겠습니다.</div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-11">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <div class="uk-comment-avatar-modified" style="background-color: #945835" ></div>
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">drr49918(020e86b0c408)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-09-11 03:19:28</div>
+          </header>
+          <div class="uk-comment-body">철도 정차역 건설은 허가제입니까 신고제입니까??? 그리고 관리 여력이 없는 상태에서 원래 있던 마을 주민들이 마을 한가운데의 균열 안으로 모조리 떨어져 죽은 거 같은데 어드민에 의한 주민 소환 요청이 가능한 부분입니까???</div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-10">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <img loading="lazy" class="uk-comment-avatar-modified" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--305fd06db36a8cb1568d5a72f468db1ff6d1338d/0cb522617473.png" />
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">관리자(Admin)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-09-05 15:58:27</div>
+          </header>
+          <div class="uk-comment-body">1차 백업이 생각보다 양이 많아 접속이 되지 않는 문제가 있었습니다. 밤딸기 구조상 맵 데이터가 바로 기록되는게 아니라서, 대략 5일 0시부터의 게임 데이터가 저장이 안 됐습니다. 혹시라도 자원이나 평탄화 작업 등이 초기화 되었다면 복구해 드리겠습니다.</div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-9">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <img loading="lazy" class="uk-comment-avatar-modified" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3a8f39e8cb6f58750a8009bc32287496d8cf9b6a/1f28c6bd00e2.jpg" />
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">SeKRa(5c756ec93b4b)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-09-05 14:55:09</div>
+          </header>
+          <div class="uk-comment-body">서바이벌 서버로 갈 수가 없어용</div>
+            <div class="uk-grid-medium uk-child-width-expand@s" uk-grid>
+            <a class="uk-width-1-2@l uk-width-1-1@m attached-image-modal-opener" data-image-src="https://games.nachtbeere.net/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3a5ecf31c9d30628d97a47d42ccda509eaf18bee/d9b1e6064f1f53c75926e1.png">
+              <img loading="lazy" class="uk-card uk-card-default uk-card-body oneline-image-box" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3a5ecf31c9d30628d97a47d42ccda509eaf18bee/d9b1e6064f1f53c75926e1.png" />
+            </a>
+            </div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-8">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <img loading="lazy" class="uk-comment-avatar-modified" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--305fd06db36a8cb1568d5a72f468db1ff6d1338d/0cb522617473.png" />
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">관리자(Admin)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-08-27 23:13:19</div>
+          </header>
+          <div class="uk-comment-body">도적떼 문제는 조건을 어느정도로 걸어야 게임 플레이에 지장이 없을지 고민을 좀 해보고 적용하도록 하겠습니다. 사실 마녀 생성되는 문제도 있어서 고민중이긴 했는데 생각보다 문제가 있네요.</div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-7">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <img loading="lazy" class="uk-comment-avatar-modified" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3a8f39e8cb6f58750a8009bc32287496d8cf9b6a/1f28c6bd00e2.jpg" />
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">SeKRa(5c756ec93b4b)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-08-27 18:18:18</div>
+          </header>
+          <div class="uk-comment-body">아구 무서워잉</div>
+            <div class="uk-grid-medium uk-child-width-expand@s" uk-grid>
+            <a class="uk-width-1-2@l uk-width-1-1@m attached-image-modal-opener" data-image-src="https://games.nachtbeere.net/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--22b60de978208d821a3a66242fe67b28009875bf/d46f3903d0fe1cbe622d37.jpg">
+              <img loading="lazy" class="uk-card uk-card-default uk-card-body oneline-image-box" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--22b60de978208d821a3a66242fe67b28009875bf/d46f3903d0fe1cbe622d37.jpg" />
+            </a>
+            </div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-6">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <img loading="lazy" class="uk-comment-avatar-modified" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3a8f39e8cb6f58750a8009bc32287496d8cf9b6a/1f28c6bd00e2.jpg" />
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">SeKRa(5c756ec93b4b)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-08-27 18:18:05</div>
+          </header>
+          <div class="uk-comment-body">고속도로에 도적떼가 들끓어용</div>
+            <div class="uk-grid-medium uk-child-width-expand@s" uk-grid>
+            <a class="uk-width-1-2@l uk-width-1-1@m attached-image-modal-opener" data-image-src="https://games.nachtbeere.net/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--037114afc102627fc8b10e2795bea14fdfd75dc1/624f3778ad7398d7c6773b.jpg">
+              <img loading="lazy" class="uk-card uk-card-default uk-card-body oneline-image-box" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--037114afc102627fc8b10e2795bea14fdfd75dc1/624f3778ad7398d7c6773b.jpg" />
+            </a>
+            </div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-5">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <img loading="lazy" class="uk-comment-avatar-modified" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3a8f39e8cb6f58750a8009bc32287496d8cf9b6a/1f28c6bd00e2.jpg" />
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">SeKRa(5c756ec93b4b)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-08-24 21:51:58</div>
+          </header>
+          <div class="uk-comment-body">https://youtu.be/iWG4BZP4dzM</div>
+            <div class="uk-grid-medium uk-child-width-expand@s" uk-grid>
+            <a class="uk-width-1-2@l uk-width-1-1@m attached-image-modal-opener" data-image-src="https://games.nachtbeere.net/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c9c1a32115f04403ef15319014053ee9893eee18/584f87155cff1f72612f1a.jpg">
+              <img loading="lazy" class="uk-card uk-card-default uk-card-body oneline-image-box" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c9c1a32115f04403ef15319014053ee9893eee18/584f87155cff1f72612f1a.jpg" />
+            </a>
+            </div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-4">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <img loading="lazy" class="uk-comment-avatar-modified" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3a8f39e8cb6f58750a8009bc32287496d8cf9b6a/1f28c6bd00e2.jpg" />
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">SeKRa(5c756ec93b4b)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-07-24 21:11:22</div>
+          </header>
+          <div class="uk-comment-body">매콤치와와</div>
+            <div class="uk-grid-medium uk-child-width-expand@s" uk-grid>
+            <a class="uk-width-1-2@l uk-width-1-1@m attached-image-modal-opener" data-image-src="https://games.nachtbeere.net/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--57f12b16b3285ed20647707ed3660b5467df8f92/35c35392da6c889c1d8c54.jfif">
+              <img loading="lazy" class="uk-card uk-card-default uk-card-body oneline-image-box" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--57f12b16b3285ed20647707ed3660b5467df8f92/35c35392da6c889c1d8c54.jfif" />
+            </a>
+            </div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-3">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <img loading="lazy" class="uk-comment-avatar-modified" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--305fd06db36a8cb1568d5a72f468db1ff6d1338d/0cb522617473.png" />
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">관리자(Admin)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-05-09 23:08:24</div>
+          </header>
+          <div class="uk-comment-body">이제 됩니다</div>
+            <div class="uk-grid-medium uk-child-width-expand@s" uk-grid>
+            <a class="uk-width-1-2@l uk-width-1-1@m attached-image-modal-opener" data-image-src="https://games.nachtbeere.net/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a1bdfe0991563cb99f30d145e4ba18a86bbc86f5/bf16fa6dc2dd44b0b90426.png">
+              <img loading="lazy" class="uk-card uk-card-default uk-card-body oneline-image-box" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a1bdfe0991563cb99f30d145e4ba18a86bbc86f5/bf16fa6dc2dd44b0b90426.png" />
+            </a>
+            </div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-2">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <img loading="lazy" class="uk-comment-avatar-modified" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3a8f39e8cb6f58750a8009bc32287496d8cf9b6a/1f28c6bd00e2.jpg" />
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">SeKRa(5c756ec93b4b)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-05-09 22:36:07</div>
+          </header>
+          <div class="uk-comment-body">프로필 사진이 업로드 되지 않아용</div>
+            <div class="uk-grid-medium uk-child-width-expand@s" uk-grid>
+            <a class="uk-width-1-2@l uk-width-1-1@m attached-image-modal-opener" data-image-src="https://games.nachtbeere.net/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ef7955d1e091a09e4e1fc51f5037b194700d2e5c/0829705895cb601eb146a9.gif">
+              <img loading="lazy" class="uk-card uk-card-default uk-card-body oneline-image-box" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ef7955d1e091a09e4e1fc51f5037b194700d2e5c/0829705895cb601eb146a9.gif" />
+            </a>
+            </div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-1">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <img loading="lazy" class="uk-comment-avatar-modified" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3a8f39e8cb6f58750a8009bc32287496d8cf9b6a/1f28c6bd00e2.jpg" />
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">SeKRa(5c756ec93b4b)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-05-09 21:48:30</div>
+          </header>
+          <div class="uk-comment-body">야바위</div>
+            <div class="uk-grid-medium uk-child-width-expand@s" uk-grid>
+            <a class="uk-width-1-2@l uk-width-1-1@m attached-image-modal-opener" data-image-src="https://games.nachtbeere.net/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--91bf1ff6750602e73b1c4e471ae21b31b9932fe9/924b7ae20a57efadeed862.jpg">
+              <img loading="lazy" class="uk-card uk-card-default uk-card-body oneline-image-box" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--91bf1ff6750602e73b1c4e471ae21b31b9932fe9/924b7ae20a57efadeed862.jpg" />
+            </a>
+            </div>
+        </div>
+      </div>
+    </article>
+    </li>
+</ul>
+<div class="uk-grid" uk-grid>
+  <div class="uk-width-1-3@m uk-width-small@s"></div>
+  <div class="uk-width-1-3@m">  <nav class="uk-pagination uk-flex-center" role="navigation" aria-label="pager">
+    <span class="first">
+  <a href="oneline%3Farticle_id=111.html">처음</a>
+</span>
+
+    <span class="prev">
+  <a rel="prev" href="oneline%3Farticle_id=111&amp;page=5.html">이전</a>
+</span>
+
+        <span class="page">
+  <a href="oneline%3Farticle_id=111.html">1</a>
+</span>
+
+        <span class="page">
+  <a href="oneline%3Farticle_id=111&amp;page=2.html">2</a>
+</span>
+
+        <span class="page">
+  <a href="oneline%3Farticle_id=111&amp;page=3.html">3</a>
+</span>
+
+        <span class="page">
+  <a href="oneline%3Farticle_id=111&amp;page=4.html">4</a>
+</span>
+
+        <span class="page">
+  <a rel="prev" href="oneline%3Farticle_id=111&amp;page=5.html">5</a>
+</span>
+
+        <span class="page current">
+  6
+</span>
+
+      
+      
+  </nav>
+</div>
+  <div class="uk-width-1-3@m uk-width-small@s"></div>
+</div>
+
+<div id="attached-image-modal" uk-modal class="uk-flex-top">
+  <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
+    <button class="uk-modal-close-outside uk-close-large" type="button" uk-close></button>
+    <img id="attached-image-view" alt="">
+  </div>
+</div>
+
+<script type="text/javascript">
+  /** jump to designated article if URL includes article ID */
+  (function () {
+    var articleId = null;
+    if (location.search != null) {
+      articleId = location.search.split('article_id=')[1];
+    }
+    if (articleId == null) {
+      return;
+    }
+    setTimeout(() => {
+      const el = document.getElementById('oneline-article-' + articleId.toString());
+      if (el) {
+        el.scrollIntoView({
+          behavior: "auto", block: "center", inline: "center"
+        });
+        el.classList.add('highlight');
+      }
+    }, 0)
+  })();
+
+  /** Open a full size image view model when thumbnail is clicked */
+  var payload = null;
+  UIkit.util.on('.attached-image-modal-opener', 'click', function (e) {
+    e.preventDefault();
+    e.currentTarget.blur();
+    payload = e.currentTarget.dataset.imageSrc;
+    if (payload != null) {
+      UIkit.modal('#attached-image-modal').show();
+    }
+  });
+  UIkit.util.on('#attached-image-modal', 'show', function () {
+    document.getElementById('attached-image-view').setAttribute('src', payload);
+  });
+</script>
+
+      </article>
+    </div>
+  </main>
+</body>
+<footer class="uk-section">
+<div class="uk-text-center uk-padding uk-padding-remove-horizontal">
+  <span class="uk-text-small uk-text-muted">
+    ©2015-2020 밤딸기 플레이스. All rights reserved
+  </span>
+</div>
+</footer>
+</html>

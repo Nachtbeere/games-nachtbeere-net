@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>밤딸기 플레이스 - 로그인</title>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="o+6xmHwppyLsBhbqGqh0qR6jU5kENeTeacVQif7Yo0j210bROf/ky6TcKs4URYN7eEmzbzV0Js/xnlF+/7H0fw==" />
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" media="all" href="assets/application-ef9ee12f44b01e1fce6bf0dcfa58c877ab80db1bcca2e010e1e7eb3c94415827.css" data-turbolinks-track="reload" />
+    <script src="packs/js/application-cafc3bf13672f0350aea.js" data-turbolinks-track="reload"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/nachtbeere-logo-c7ced22856484b4657966ef1c3015cd9a87c5fc6620ffc3d580cfc325158344c.png" />
+  </head>
+
+  <body>
+  <header class="top-wrap uk-position-relative">
+    <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+      <nav class="uk-navbar-container" uk-navbar>
+        <div class="uk-navbar-left">
+          <span class="site_logo"><a href="index.html">밤딸기 플레이스</a></span>
+        </div>
+        <div class="uk-navbar-right">
+          <a class="uk-navbar-toggle uk-hidden@m" href="sign-in.html#" uk-toggle="target: #mobile_menu">
+            <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
+          </a>
+          <div id="mobile_menu" uk-offcanvas="mode: reveal; overlay: true; flip: true;">
+            <div class="uk-offcanvas-bar">
+              <button class="uk-offcanvas-close" type="button" uk-close></button>
+              <ul class="uk-nav uk-nav-default">
+                <li>
+                  <a href="index.html">대문</a>
+                </li>
+                <li class="uk-parent">
+                  <a href="about.html">밤딸기</a>
+                    <ul class="uk-nav-sub">
+                      <li><a href="about.html">소개</a></li>
+                      <li><a href="notice.html">공지</a></li>
+                      <li><a href="develop.html">개발</a></li>
+                      <li><a href="donation.html">기부</a></li>
+                      <li><a href="oneline.html">게시판</a></li>
+                      <li><a href="terms-of-service.html">이용 약관</a></li>
+                    </ul>
+                </li>
+                <li class="uk-parent">
+                  <a href="minecraft.html">마인크래프트</a>
+                    <ul class="uk-nav-sub">
+                      <li><a href="minecraft/about.html">소개</a></li>
+                      <li><a href="minecraft/rules.html">규칙</a></li>
+                      <li><a href="minecraft/connect.html">접속</a></li>
+                      <li><a href="minecraft/maps.html">지도</a></li>
+                      <li><a target="_blank" href="https://wiki.minecraft.nachtbeere.net/wiki/%EB%A7%88%ED%9E%88%EC%BB%A4:%EB%8C%80%EB%AC%B8">위키⎋</a></li>
+                    </ul>
+                </li>
+                <li class="uk-parent">
+                  <a href="multiplay/about.html">다른 게임들</a>
+                    <ul class="uk-nav-sub">
+                      <li><a href="multiplay/about.html">소개</a></li>
+                      <li><a href="multiplay/ottd.html">Open TTD</a></li>
+                      <li><a href="multiplay/orct.html">Open RCT</a></li>
+                    </ul>
+                </li>
+                  <li>
+                    <a data-method="get" href="sign-in.html">로그인</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <ul class="uk-navbar-nav uk-visible@m">
+            <li>
+              <a href="index.html">대문</a>
+            </li>
+            <li>
+              <a href="about.html">밤딸기</a>
+              <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                  <li><a href="about.html">소개</a></li>
+                  <li><a href="notice.html">공지</a></li>
+                  <li><a href="develop.html">개발</a></li>
+                  <li><a href="donation.html">기부</a></li>
+                  <li><a href="oneline.html">게시판</a></li>
+                  <li><a href="terms-of-service.html">이용 약관</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="minecraft.html">마인크래프트</a>
+              <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                  <li><a href="minecraft/about.html">소개</a></li>
+                  <li><a href="minecraft/rules.html">규칙</a></li>
+                  <li><a href="minecraft/connect.html">접속</a></li>
+                  <li><a href="minecraft/maps.html">지도</a></li>
+                  <li><a target="_blank" href="https://wiki.minecraft.nachtbeere.net/wiki/%EB%A7%88%ED%9E%88%EC%BB%A4:%EB%8C%80%EB%AC%B8">위키⎋</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="multiplay/about.html">다른 게임들</a>
+              <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                  <li><a href="multiplay/about.html">소개</a></li>
+                  <li><a href="multiplay/ottd.html">Open TTD</a></li>
+                  <li><a href="multiplay/orct.html">Open RCT</a></li>
+                </ul>
+              </div>
+            </li>
+              <li>
+                <a data-uk-icon="icon: sign-in" data-method="get" href="sign-in.html"></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main id="content" class="uk-section uk-section-default">
+    <div class="uk-container uk-container-small">
+      <article class="uk-container">
+      <div class="breadcrumbs"><a href="https://games.nachtbeere.net/">Home</a><span class="current">로그인</span></div>
+        <!--<div class="uk-width-medium uk-padding-small uk-position-z-index uk-scrollspy-inview uk-animation-fade" uk-scrollspy="cls: uk-animation-fade" style="">-->
+  <div class="uk-text-center uk-margin">
+    <h1>로그인</h1>
+<!--    <img src="img/login-logo.svg" alt="Logo">-->
+  </div>
+
+<form class="toggle-class" action="sign-in.html" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="iNqwAHXPFmANO220f0JO4kyLVwsI85tUr+queqS09GXuV1HT/kTsqqLPWZA96tCbBsoRG+OJLByDl2zEwqJQAA==" autocomplete="off" />
+    <fieldset class="uk-fieldset">
+      <div class="uk-margin-small">
+        <div class="uk-inline uk-width-1-1">
+          <span class="uk-form-icon uk-form-icon-flip uk-icon" uk-icon="icon: mail"></span>
+          <input type="text" name="email" id="email" value="" placeholder=" E-mail 주소" class="uk-input uk-border-pill" required="required" />
+        </div>
+      </div>
+      <div class="uk-margin-small">
+        <div class="uk-inline uk-width-1-1">
+          <span class="uk-form-icon uk-form-icon-flip uk-icon" uk-icon="icon: lock"></span>
+          <input type="password" name="password" id="password" value="" placeholder="비밀번호" class="uk-input uk-border-pill" required="required" />
+        </div>
+      </div>
+<!--      <div class="uk-margin-small">-->
+<!--        <label><input class="uk-checkbox" type="checkbox"> 로그인 유지하기</label>-->
+<!--      </div>-->
+      <input type="submit" name="commit" value="Sign In" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" data-disable-with="Sign In" />
+    </fieldset>
+</form><a class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom toggle-class" data-method="get" href="sign-up.html">Sign Up</a>
+
+<!-- reset password -->
+  <form class="toggle-class" hidden="hidden" action="https://games.nachtbeere.net/password-reset" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="O5JWJySFAIoJ/G4xq6ylsBMlo9LcGtAbk3absUCbmK4DdShQR/uqUHhGEqCc+f8gZ0TxJ3jc7r+2wTV/409FFw==" autocomplete="off" />
+    <div class="uk-margin-small">
+      <div class="uk-inline uk-width-1-1">
+        <span class="uk-form-icon uk-form-icon-flip uk-icon" uk-icon="icon: mail"></span>
+        <input type="text" name="email" id="email" value="" placeholder="가입한 E-mail 주소" class="uk-input uk-border-pill" required="required" />
+      </div>
+    </div>
+    <div class="uk-margin-bottom">
+      <input type="submit" name="commit" value="비밀번호 찾기" class="uk-button uk-button-primary uk-width-1-1 uk-border-pill" data-disable-with="비밀번호 찾기" />
+    </div>
+</form>  <!-- /recover password -->
+
+  <!-- action buttons -->
+  <div>
+    <div class="uk-text-center">
+      <a class="uk-link-reset uk-text-small toggle-class" data-uk-toggle="target: .toggle-class ;animation: uk-animation-fade">비밀번호를 잊으셨나요?</a>
+      <a class="uk-link-reset uk-text-small toggle-class" data-uk-toggle="target: .toggle-class ;animation: uk-animation-fade" hidden=""><span uk-icon="arrow-left"></span>로그인으로 돌아가기</a>
+    </div>
+  </div>
+  <!-- action buttons -->
+<!--</div>-->
+
+
+
+      </article>
+    </div>
+  </main>
+</body>
+<footer class="uk-section">
+<div class="uk-text-center uk-padding uk-padding-remove-horizontal">
+  <span class="uk-text-small uk-text-muted">
+    ©2015-2020 밤딸기 플레이스. All rights reserved
+  </span>
+</div>
+</footer>
+</html>

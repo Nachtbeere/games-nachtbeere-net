@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>밤딸기 플레이스 - 게시판</title>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="Y7XTcD2A3SzMaNuwSFDtT7+ekmoJ1A8mIKfKEv6n5Dg2jCQ5eFaexYSy55RGvRqd2XRynDiVzTe4/Mvl/86zDw==" />
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" media="all" href="assets/application-ef9ee12f44b01e1fce6bf0dcfa58c877ab80db1bcca2e010e1e7eb3c94415827.css" data-turbolinks-track="reload" />
+    <script src="packs/js/application-cafc3bf13672f0350aea.js" data-turbolinks-track="reload"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/nachtbeere-logo-c7ced22856484b4657966ef1c3015cd9a87c5fc6620ffc3d580cfc325158344c.png" />
+      <script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="noxowl" data-description="밤딸기 운영에 힘이 되도록 피자를 보내주세요!" data-message="오늘도 밤딸기에 방문해 주셔서 감사합니다." data-color="#FF813F" data-position="right" data-x_margin="18" data-y_margin="18"></script>
+  </head>
+
+  <body>
+  <header class="top-wrap uk-position-relative">
+    <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+      <nav class="uk-navbar-container" uk-navbar>
+        <div class="uk-navbar-left">
+          <span class="site_logo"><a href="index.html">밤딸기 플레이스</a></span>
+        </div>
+        <div class="uk-navbar-right">
+          <a class="uk-navbar-toggle uk-hidden@m" href="oneline%3Farticle_id=114&amp;page=4.html#" uk-toggle="target: #mobile_menu">
+            <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
+          </a>
+          <div id="mobile_menu" uk-offcanvas="mode: reveal; overlay: true; flip: true;">
+            <div class="uk-offcanvas-bar">
+              <button class="uk-offcanvas-close" type="button" uk-close></button>
+              <ul class="uk-nav uk-nav-default">
+                <li>
+                  <a href="index.html">대문</a>
+                </li>
+                <li class="uk-parent">
+                  <a href="about.html">밤딸기</a>
+                    <ul class="uk-nav-sub">
+                      <li><a href="about.html">소개</a></li>
+                      <li><a href="notice.html">공지</a></li>
+                      <li><a href="develop.html">개발</a></li>
+                      <li><a href="donation.html">기부</a></li>
+                      <li><a href="oneline.html">게시판</a></li>
+                      <li><a href="terms-of-service.html">이용 약관</a></li>
+                    </ul>
+                </li>
+                <li class="uk-parent">
+                  <a href="minecraft.html">마인크래프트</a>
+                    <ul class="uk-nav-sub">
+                      <li><a href="minecraft/about.html">소개</a></li>
+                      <li><a href="minecraft/rules.html">규칙</a></li>
+                      <li><a href="minecraft/connect.html">접속</a></li>
+                      <li><a href="minecraft/maps.html">지도</a></li>
+                      <li><a target="_blank" href="https://wiki.minecraft.nachtbeere.net/wiki/%EB%A7%88%ED%9E%88%EC%BB%A4:%EB%8C%80%EB%AC%B8">위키⎋</a></li>
+                    </ul>
+                </li>
+                <li class="uk-parent">
+                  <a href="multiplay/about.html">다른 게임들</a>
+                    <ul class="uk-nav-sub">
+                      <li><a href="multiplay/about.html">소개</a></li>
+                      <li><a href="multiplay/ottd.html">Open TTD</a></li>
+                      <li><a href="multiplay/orct.html">Open RCT</a></li>
+                    </ul>
+                </li>
+                  <li>
+                    <a data-method="get" href="sign-in.html">로그인</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <ul class="uk-navbar-nav uk-visible@m">
+            <li>
+              <a href="index.html">대문</a>
+            </li>
+            <li>
+              <a href="about.html">밤딸기</a>
+              <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                  <li><a href="about.html">소개</a></li>
+                  <li><a href="notice.html">공지</a></li>
+                  <li><a href="develop.html">개발</a></li>
+                  <li><a href="donation.html">기부</a></li>
+                  <li><a href="oneline.html">게시판</a></li>
+                  <li><a href="terms-of-service.html">이용 약관</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="minecraft.html">마인크래프트</a>
+              <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                  <li><a href="minecraft/about.html">소개</a></li>
+                  <li><a href="minecraft/rules.html">규칙</a></li>
+                  <li><a href="minecraft/connect.html">접속</a></li>
+                  <li><a href="minecraft/maps.html">지도</a></li>
+                  <li><a target="_blank" href="https://wiki.minecraft.nachtbeere.net/wiki/%EB%A7%88%ED%9E%88%EC%BB%A4:%EB%8C%80%EB%AC%B8">위키⎋</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="multiplay/about.html">다른 게임들</a>
+              <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                  <li><a href="multiplay/about.html">소개</a></li>
+                  <li><a href="multiplay/ottd.html">Open TTD</a></li>
+                  <li><a href="multiplay/orct.html">Open RCT</a></li>
+                </ul>
+              </div>
+            </li>
+              <li>
+                <a data-uk-icon="icon: sign-in" data-method="get" href="sign-in.html"></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main id="content" class="uk-section uk-section-default">
+    <div class="uk-container uk-container-small">
+      <article class="uk-container">
+      <div class="breadcrumbs"><a href="https://games.nachtbeere.net/">Home</a><a href="about.html">밤딸기</a><span class="current">게시판</span></div>
+        <h1>게시판</h1>
+<div>
+    <fieldset class="uk-fieldset">
+      <div class="uk-margin-small">
+          <div class="uk-inline uk-width-1-1">
+            <a class="link-cover" href="sign-in.html">
+              <div></div>
+            </a>
+            <span class="uk-form-icon uk-form-icon-flip uk-icon" uk-icon="icon: comment"></span>
+            <textarea placeholder="로그인 해주세요" class="uk-textarea" disabled></textarea>
+          </div>
+      </div>
+      <div class="uk-text-right">
+        <button class="uk-button uk-button-primary" disabled>작성</button>
+      </div>
+    </fieldset>
+</div>
+
+<ul class="uk-list uk-list-divider">
+    <li id="oneline-article-54">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <img loading="lazy" class="uk-comment-avatar-modified" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--305fd06db36a8cb1568d5a72f468db1ff6d1338d/0cb522617473.png" />
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">관리자(Admin)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-11-07 16:54:16</div>
+          </header>
+          <div class="uk-comment-body">사회보험 도입 이전에 사망하여 전재산 잃어버린 분의 계정 복구해 드렸습니다.</div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-53">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <img loading="lazy" class="uk-comment-avatar-modified" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--305fd06db36a8cb1568d5a72f468db1ff6d1338d/0cb522617473.png" />
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">관리자(Admin)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-11-06 16:27:14</div>
+          </header>
+          <div class="uk-comment-body">인벤토리가 가득 찬 상태로 따봉 보상 수령시 인벤토리 내용물 하나가 대체되는 버그가 확인되었습니다. 이후에 자체개발로 대체하거나 다른 방법을 찾기 전까진 따봉 전에 인벤토리에 여유 공간이 있는지 확인해주세요.</div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-52">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <img loading="lazy" class="uk-comment-avatar-modified" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--305fd06db36a8cb1568d5a72f468db1ff6d1338d/0cb522617473.png" />
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">관리자(Admin)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-11-05 17:31:02</div>
+          </header>
+          <div class="uk-comment-body">최신 버전에도 존재하는 버그입니다. https://bugs.mojang.com/browse/MC-153904</div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-51">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <img loading="lazy" class="uk-comment-avatar-modified" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--305fd06db36a8cb1568d5a72f468db1ff6d1338d/0cb522617473.png" />
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">관리자(Admin)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-11-05 17:29:17</div>
+          </header>
+          <div class="uk-comment-body">마인크래프트에서 물고기는 원래 사라집니다. 이걸 막으려면 물고기에 이름표를 붙여주거나 자체 플러그인 룰로 물고기가 안 사라지게 붙잡고 있어야 합니다. 마인크래프트 자체에 앤티티 관리에 관한 버그가 있어서 모든 존재는 이름표가 붙어있지 않으면 언젠가 사라질 가능성이 있습니다.
+
+즉, 서버 내 수량 최적화 + 마인크래프트 자체 버그 등으로 사라질 수 있기 때문에 이름표를 붙여서 유지해주세요.</div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-50">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <img loading="lazy" class="uk-comment-avatar-modified" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--305fd06db36a8cb1568d5a72f468db1ff6d1338d/0cb522617473.png" />
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">관리자(Admin)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-11-05 17:22:11</div>
+          </header>
+          <div class="uk-comment-body">서버에 앤티티 최대 수 제한이 있어서 그걸 넘는 동물/주민은 사라지는 것으로 알고 있습니다. 물고기는 풀어두면 언젠가 사라집니다. 다른 곳에서 리스폰이 되고 있어서 안 나올 수도 있어요.</div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-49">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <img loading="lazy" class="uk-comment-avatar-modified" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3a8f39e8cb6f58750a8009bc32287496d8cf9b6a/1f28c6bd00e2.jpg" />
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">SeKRa(5c756ec93b4b)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-11-05 14:14:46</div>
+          </header>
+          <div class="uk-comment-body">물고기 관련해서 버그가 생긴건지, 아님 테러를 당한 것 같아요.
+징징 아파트에서 &#39;어부&#39; 주민이 증발했고, 인근 인공 호수에 풀어놓은 물고기들이 전부 사라졌으며, 매일 물고기와 오징어가 리스폰 되는걸 확인했던 자연 호수에서도 오징어는 리스폰이 되는걸 확인했지만 물고기는 아예 리스폰이 되질 않고 있어요.</div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-48">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <div class="uk-comment-avatar-modified" style="background-color: #80919e" ></div>
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">Ryuki(2bf202468cae)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-11-05 12:43:37</div>
+          </header>
+          <div class="uk-comment-body">물고기 풀어놓으려고 했으나 안보여서 좌절한 3층석탑분수</div>
+            <div class="uk-grid-medium uk-child-width-expand@s" uk-grid>
+            <a class="uk-width-1-2@l uk-width-1-1@m attached-image-modal-opener" data-image-src="https://games.nachtbeere.net/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ec680a43164741d8d12dfa9284e885e35fe05615/23b69624deac1e40ed63e3.png">
+              <img loading="lazy" class="uk-card uk-card-default uk-card-body oneline-image-box" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ec680a43164741d8d12dfa9284e885e35fe05615/23b69624deac1e40ed63e3.png" />
+            </a>
+            </div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-47">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <img loading="lazy" class="uk-comment-avatar-modified" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--305fd06db36a8cb1568d5a72f468db1ff6d1338d/0cb522617473.png" />
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">관리자(Admin)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-11-04 17:40:48</div>
+          </header>
+          <div class="uk-comment-body">대충 해결이 된 것 같기도 합니다만, 만약을 위해 나중에 다른 기부 수단을 추가하도록 하겠습니다. </div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-46">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <img loading="lazy" class="uk-comment-avatar-modified" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--305fd06db36a8cb1568d5a72f468db1ff6d1338d/0cb522617473.png" />
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">관리자(Admin)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-11-04 16:11:00</div>
+          </header>
+          <div class="uk-comment-body">아니 다른 문제가 있네요... Buy me a coffee 일단 내립니다...</div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-45">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <img loading="lazy" class="uk-comment-avatar-modified" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--305fd06db36a8cb1568d5a72f468db1ff6d1338d/0cb522617473.png" />
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">관리자(Admin)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-11-04 16:08:45</div>
+          </header>
+          <div class="uk-comment-body">페이팔을 통하지 말고 카드 정보를 직접 입력하면 가능한 것으로 확인되었습니다.</div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-44">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+            <div class="uk-comment-avatar-modified" style="background-color: #000000" ></div>
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">탈퇴한 유저</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-11-04 13:03:04</div>
+          </header>
+          <div class="uk-comment-body">Buy me a coffee도 페이팔이라 송금이 막힙니다</div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-43">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <img loading="lazy" class="uk-comment-avatar-modified" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--305fd06db36a8cb1568d5a72f468db1ff6d1338d/0cb522617473.png" />
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">관리자(Admin)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-11-04 01:26:41</div>
+          </header>
+          <div class="uk-comment-body">전 세대 맵에서는 광역 화재방지 시스템이 적용되어 있었는데, 현 세대에는 없습니다. 화재 대책(가급적 울 대신 콘크리트 사용 등)에 신경써주세요... 화재방지가 필요하다면 대안을 생각해 보겠습니다.</div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-42">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <img loading="lazy" class="uk-comment-avatar-modified" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--305fd06db36a8cb1568d5a72f468db1ff6d1338d/0cb522617473.png" />
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">관리자(Admin)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-11-03 13:25:15</div>
+          </header>
+          <div class="uk-comment-body">1.17 출시 이후에 1.16 업데이트 예정입니다.</div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-41">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+            <div class="uk-comment-avatar-modified" style="background-color: #000000" ></div>
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">탈퇴한 유저</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-11-02 19:06:58</div>
+          </header>
+          <div class="uk-comment-body">버전업 계획은 있나요 혹시
+검은돌 쓰고 싶습니다</div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-40">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <img loading="lazy" class="uk-comment-avatar-modified" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3a8f39e8cb6f58750a8009bc32287496d8cf9b6a/1f28c6bd00e2.jpg" />
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">SeKRa(5c756ec93b4b)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-11-02 17:15:03</div>
+          </header>
+          <div class="uk-comment-body">부도덕한 성관계 금지</div>
+            <div class="uk-grid-medium uk-child-width-expand@s" uk-grid>
+            <a class="uk-width-1-2@l uk-width-1-1@m attached-image-modal-opener" data-image-src="https://games.nachtbeere.net/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6bed982ecbbef8dd00b0b244f35dc118943c89bb/e19d88e20d602a48dacf56.png">
+              <img loading="lazy" class="uk-card uk-card-default uk-card-body oneline-image-box" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6bed982ecbbef8dd00b0b244f35dc118943c89bb/e19d88e20d602a48dacf56.png" />
+            </a>
+            </div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-39">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <img loading="lazy" class="uk-comment-avatar-modified" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--305fd06db36a8cb1568d5a72f468db1ff6d1338d/0cb522617473.png" />
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">관리자(Admin)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-10-29 02:23:42</div>
+          </header>
+          <div class="uk-comment-body">부정한 낚시를 일삼는 여러분들에게 조만간 용왕님의 철퇴가 있을 예정입니다(조만간: 매우 오래 걸림).</div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-38">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <img loading="lazy" class="uk-comment-avatar-modified" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3a8f39e8cb6f58750a8009bc32287496d8cf9b6a/1f28c6bd00e2.jpg" />
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">SeKRa(5c756ec93b4b)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-10-28 01:51:45</div>
+          </header>
+          <div class="uk-comment-body">end_rod, dragon_wall_head 몬스터가 스폰되는 자연블록인지 확인해주세요.</div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-37">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <img loading="lazy" class="uk-comment-avatar-modified" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--305fd06db36a8cb1568d5a72f468db1ff6d1338d/0cb522617473.png" />
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">관리자(Admin)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-10-23 22:40:40</div>
+          </header>
+          <div class="uk-comment-body">감사합니다</div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-36">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <img loading="lazy" class="uk-comment-avatar-modified" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3a8f39e8cb6f58750a8009bc32287496d8cf9b6a/1f28c6bd00e2.jpg" />
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">SeKRa(5c756ec93b4b)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-10-23 18:34:58</div>
+          </header>
+          <div class="uk-comment-body">관리자에게 알려달래요</div>
+            <div class="uk-grid-medium uk-child-width-expand@s" uk-grid>
+            <a class="uk-width-1-2@l uk-width-1-1@m attached-image-modal-opener" data-image-src="https://games.nachtbeere.net/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2f6d9deb21babfefb875c18c706dda0aee2b11b4/4ef927b4b52a81626c3b86.png">
+              <img loading="lazy" class="uk-card uk-card-default uk-card-body oneline-image-box" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2f6d9deb21babfefb875c18c706dda0aee2b11b4/4ef927b4b52a81626c3b86.png" />
+            </a>
+            </div>
+        </div>
+      </div>
+    </article>
+    </li>
+    <li id="oneline-article-35">
+    <article class="uk-comment">
+      <div class="uk-grid">
+        <div class="uk-width-auto">
+                <img loading="lazy" class="uk-comment-avatar-modified" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3a8f39e8cb6f58750a8009bc32287496d8cf9b6a/1f28c6bd00e2.jpg" />
+        </div>
+        <div class="uk-width-expand uk-padding-remove-left">
+          <header class="uk-comment-header-oneline uk-grid uk-padding-remove uk-grid">
+              <div class="uk-width-expand uk-inline uk-comment-title-modified uk-width-oneline-username uk-text-bold uk-text-middle">SeKRa(5c756ec93b4b)</div>
+            <div class="uk-text-right uk-padding-remove-left uk-inline uk-comment-meta-modified uk-width-oneline-datetime uk-text-middle">2020-10-23 17:32:57</div>
+          </header>
+          <div class="uk-comment-body">1빠</div>
+            <div class="uk-grid-medium uk-child-width-expand@s" uk-grid>
+            <a class="uk-width-1-2@l uk-width-1-1@m attached-image-modal-opener" data-image-src="https://games.nachtbeere.net/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--998943ceb40617626c3929476c912d0c6fbf826c/47578e8f89590f73d31770.png">
+              <img loading="lazy" class="uk-card uk-card-default uk-card-body oneline-image-box" src="rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--998943ceb40617626c3929476c912d0c6fbf826c/47578e8f89590f73d31770.png" />
+            </a>
+            </div>
+        </div>
+      </div>
+    </article>
+    </li>
+</ul>
+<div class="uk-grid" uk-grid>
+  <div class="uk-width-1-3@m uk-width-small@s"></div>
+  <div class="uk-width-1-3@m">  <nav class="uk-pagination uk-flex-center" role="navigation" aria-label="pager">
+    <span class="first">
+  <a href="oneline%3Farticle_id=114.html">처음</a>
+</span>
+
+    <span class="prev">
+  <a rel="prev" href="oneline%3Farticle_id=114&amp;page=3.html">이전</a>
+</span>
+
+        <span class="page">
+  <a href="oneline%3Farticle_id=114.html">1</a>
+</span>
+
+        <span class="page">
+  <a href="oneline%3Farticle_id=114&amp;page=2.html">2</a>
+</span>
+
+        <span class="page">
+  <a rel="prev" href="oneline%3Farticle_id=114&amp;page=3.html">3</a>
+</span>
+
+        <span class="page current">
+  4
+</span>
+
+        <span class="page">
+  <a rel="next" href="oneline%3Farticle_id=114&amp;page=5.html">5</a>
+</span>
+
+        <span class="page">
+  <a href="oneline%3Farticle_id=114&amp;page=6.html">6</a>
+</span>
+
+      <span class="next">
+  <a rel="next" href="oneline%3Farticle_id=114&amp;page=5.html">다음</a>
+</span>
+
+      <span class="last">
+  <a href="oneline%3Farticle_id=114&amp;page=6.html">마지막</a>
+</span>
+
+  </nav>
+</div>
+  <div class="uk-width-1-3@m uk-width-small@s"></div>
+</div>
+
+<div id="attached-image-modal" uk-modal class="uk-flex-top">
+  <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
+    <button class="uk-modal-close-outside uk-close-large" type="button" uk-close></button>
+    <img id="attached-image-view" alt="">
+  </div>
+</div>
+
+<script type="text/javascript">
+  /** jump to designated article if URL includes article ID */
+  (function () {
+    var articleId = null;
+    if (location.search != null) {
+      articleId = location.search.split('article_id=')[1];
+    }
+    if (articleId == null) {
+      return;
+    }
+    setTimeout(() => {
+      const el = document.getElementById('oneline-article-' + articleId.toString());
+      if (el) {
+        el.scrollIntoView({
+          behavior: "auto", block: "center", inline: "center"
+        });
+        el.classList.add('highlight');
+      }
+    }, 0)
+  })();
+
+  /** Open a full size image view model when thumbnail is clicked */
+  var payload = null;
+  UIkit.util.on('.attached-image-modal-opener', 'click', function (e) {
+    e.preventDefault();
+    e.currentTarget.blur();
+    payload = e.currentTarget.dataset.imageSrc;
+    if (payload != null) {
+      UIkit.modal('#attached-image-modal').show();
+    }
+  });
+  UIkit.util.on('#attached-image-modal', 'show', function () {
+    document.getElementById('attached-image-view').setAttribute('src', payload);
+  });
+</script>
+
+      </article>
+    </div>
+  </main>
+</body>
+<footer class="uk-section">
+<div class="uk-text-center uk-padding uk-padding-remove-horizontal">
+  <span class="uk-text-small uk-text-muted">
+    ©2015-2020 밤딸기 플레이스. All rights reserved
+  </span>
+</div>
+</footer>
+</html>

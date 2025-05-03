@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>밤딸기 플레이스 - 메인</title>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="xch06wr6Q/d6t2vzEE3262o5YSIsFP9lQIWcKfLQTHWQ8YOiTywAHjJtV9ceoAE5DNOB1B1VPXTY3p3e87kbQg==" />
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" media="all" href="assets/application-ef9ee12f44b01e1fce6bf0dcfa58c877ab80db1bcca2e010e1e7eb3c94415827.css" data-turbolinks-track="reload" />
+    <script src="packs/js/application-cafc3bf13672f0350aea.js" data-turbolinks-track="reload"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/nachtbeere-logo-c7ced22856484b4657966ef1c3015cd9a87c5fc6620ffc3d580cfc325158344c.png" />
+  </head>
+
+  <body>
+  <header class="top-wrap uk-position-relative">
+    <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+      <nav class="uk-navbar-container" uk-navbar>
+        <div class="uk-navbar-left">
+          <span class="site_logo"><a href="index.html">밤딸기 플레이스</a></span>
+        </div>
+        <div class="uk-navbar-right">
+          <a class="uk-navbar-toggle uk-hidden@m" href="index.html#" uk-toggle="target: #mobile_menu">
+            <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
+          </a>
+          <div id="mobile_menu" uk-offcanvas="mode: reveal; overlay: true; flip: true;">
+            <div class="uk-offcanvas-bar">
+              <button class="uk-offcanvas-close" type="button" uk-close></button>
+              <ul class="uk-nav uk-nav-default">
+                <li>
+                  <a href="index.html">대문</a>
+                </li>
+                <li class="uk-parent">
+                  <a href="about.html">밤딸기</a>
+                    <ul class="uk-nav-sub">
+                      <li><a href="about.html">소개</a></li>
+                      <li><a href="notice.html">공지</a></li>
+                      <li><a href="develop.html">개발</a></li>
+                      <li><a href="donation.html">기부</a></li>
+                      <li><a href="oneline.html">게시판</a></li>
+                      <li><a href="terms-of-service.html">이용 약관</a></li>
+                    </ul>
+                </li>
+                <li class="uk-parent">
+                  <a href="minecraft.html">마인크래프트</a>
+                    <ul class="uk-nav-sub">
+                      <li><a href="minecraft/about.html">소개</a></li>
+                      <li><a href="minecraft/rules.html">규칙</a></li>
+                      <li><a href="minecraft/connect.html">접속</a></li>
+                      <li><a href="minecraft/maps.html">지도</a></li>
+                      <li><a target="_blank" href="https://wiki.minecraft.nachtbeere.net/wiki/%EB%A7%88%ED%9E%88%EC%BB%A4:%EB%8C%80%EB%AC%B8">위키⎋</a></li>
+                    </ul>
+                </li>
+                <li class="uk-parent">
+                  <a href="multiplay/about.html">다른 게임들</a>
+                    <ul class="uk-nav-sub">
+                      <li><a href="multiplay/about.html">소개</a></li>
+                      <li><a href="multiplay/ottd.html">Open TTD</a></li>
+                      <li><a href="multiplay/orct.html">Open RCT</a></li>
+                    </ul>
+                </li>
+                  <li>
+                    <a data-method="get" href="sign-in.html">로그인</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <ul class="uk-navbar-nav uk-visible@m">
+            <li>
+              <a href="index.html">대문</a>
+            </li>
+            <li>
+              <a href="about.html">밤딸기</a>
+              <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                  <li><a href="about.html">소개</a></li>
+                  <li><a href="notice.html">공지</a></li>
+                  <li><a href="develop.html">개발</a></li>
+                  <li><a href="donation.html">기부</a></li>
+                  <li><a href="oneline.html">게시판</a></li>
+                  <li><a href="terms-of-service.html">이용 약관</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="minecraft.html">마인크래프트</a>
+              <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                  <li><a href="minecraft/about.html">소개</a></li>
+                  <li><a href="minecraft/rules.html">규칙</a></li>
+                  <li><a href="minecraft/connect.html">접속</a></li>
+                  <li><a href="minecraft/maps.html">지도</a></li>
+                  <li><a target="_blank" href="https://wiki.minecraft.nachtbeere.net/wiki/%EB%A7%88%ED%9E%88%EC%BB%A4:%EB%8C%80%EB%AC%B8">위키⎋</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="multiplay/about.html">다른 게임들</a>
+              <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                  <li><a href="multiplay/about.html">소개</a></li>
+                  <li><a href="multiplay/ottd.html">Open TTD</a></li>
+                  <li><a href="multiplay/orct.html">Open RCT</a></li>
+                </ul>
+              </div>
+            </li>
+              <li>
+                <a data-uk-icon="icon: sign-in" data-method="get" href="sign-in.html"></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main id="content" class="uk-section uk-section-default">
+    <div class="uk-container uk-container-small">
+      <article class="uk-container">
+      
+        <div class="uk-child-width-expand@s" uk-grid>
+  <div>
+    <h2>공지</h2>
+    <div class="uk-card uk-card-default uk-card-body" style="min-height: 180px">
+        <li>
+          <div class="uk-grid">
+            <div class="uk-inline uk-width-expand nowrap-ellipsis"><a href="notice/5.html">11/12(토) 밤딸기 서비스 변경사항 안내</a></div>
+            <div class="uk-inline uk-width-auto uk-text-meta" style="overflow: hidden">2022-11-12</div>
+          </div>
+        </li>
+        <li>
+          <div class="uk-grid">
+            <div class="uk-inline uk-width-expand nowrap-ellipsis"><a href="notice/4.html">2/24(수) 밤딸기 마인크래프트 업데이트 안내</a></div>
+            <div class="uk-inline uk-width-auto uk-text-meta" style="overflow: hidden">2021-02-24</div>
+          </div>
+        </li>
+        <li>
+          <div class="uk-grid">
+            <div class="uk-inline uk-width-expand nowrap-ellipsis"><a href="notice/3.html">12/7(월) 밤딸기 게임 서버 점검 안내</a></div>
+            <div class="uk-inline uk-width-auto uk-text-meta" style="overflow: hidden">2020-12-06</div>
+          </div>
+        </li>
+        <li>
+          <div class="uk-grid">
+            <div class="uk-inline uk-width-expand nowrap-ellipsis"><a href="notice/2.html">밤딸기 마인크래프트 메인 서버 오픈 안내</a></div>
+            <div class="uk-inline uk-width-auto uk-text-meta" style="overflow: hidden">2020-08-24</div>
+          </div>
+        </li>
+        <li>
+          <div class="uk-grid">
+            <div class="uk-inline uk-width-expand nowrap-ellipsis"><a href="notice/1.html">밤딸기 플레이스 사이트 리뉴얼 안내</a></div>
+            <div class="uk-inline uk-width-auto uk-text-meta" style="overflow: hidden">2020-05-09</div>
+          </div>
+        </li>
+    </div>
+  </div>
+  <div>
+    <div class="header-with-option">
+      <h2 class="uk-text-left">게시판</h2>
+      <a href="oneline.html" style="margin: 18px" class="uk-text-right uk-text-bottom" uk-icon="icon: more"></a>
+    </div>
+    <div class="uk-card uk-card-default uk-card-body" style="min-height: 180px">
+        <li>
+          <div class="uk-grid">
+            <div class="uk-inline uk-width-expand title nowrap-ellipsis"><a href="oneline%3Farticle_id=114.html">삥빵뽕뿡</a></div>
+            <div class="uk-inline uk-width-xsmall uk-text-meta nowrap-ellipsis">pjms</div>
+          </div>
+        </li>
+        <li>
+          <div class="uk-grid">
+            <div class="uk-inline uk-width-expand title nowrap-ellipsis"><a href="oneline%3Farticle_id=113.html">마인크래프트 사용자 이름과 UUID는 동일하게 유지됩니다. 그리고 ...</a></div>
+            <div class="uk-inline uk-width-xsmall uk-text-meta nowrap-ellipsis">관리자</div>
+          </div>
+        </li>
+        <li>
+          <div class="uk-grid">
+            <div class="uk-inline uk-width-expand title nowrap-ellipsis"><a href="oneline%3Farticle_id=112.html">https://www.clien.net/service/board/n...</a></div>
+            <div class="uk-inline uk-width-xsmall uk-text-meta nowrap-ellipsis">SeKRa</div>
+          </div>
+        </li>
+        <li>
+          <div class="uk-grid">
+            <div class="uk-inline uk-width-expand title nowrap-ellipsis"><a href="oneline%3Farticle_id=111.html">성인용 게임 사이트 밤딸기 플레이스에 오신 것을 환영합니다.</a></div>
+            <div class="uk-inline uk-width-xsmall uk-text-meta nowrap-ellipsis">관리자</div>
+          </div>
+        </li>
+        <li>
+          <div class="uk-grid">
+            <div class="uk-inline uk-width-expand title nowrap-ellipsis"><a href="oneline%3Farticle_id=110.html">파렴치한 성인용 게임 사이트에 오신 것을 환영합니다</a></div>
+            <div class="uk-inline uk-width-xsmall uk-text-meta nowrap-ellipsis">SeKRa</div>
+          </div>
+        </li>
+    </div>
+  </div>
+</div>
+<h2>멀티플레이 서버 목록</h2>
+<img alt="multiplay servers" class="main_banner" src="assets/pages/multiplays-7b84da7e844762392a3c60e50ccc3571edebdfc8ff4dca9ddc0198c4a251a628.jpg" />
+<h3>Minecraft</h3>
+<a href="minecraft/about.html"><img alt="minecraft server" class="main_banner" src="assets/pages/nachtbeere_minecraft_logo-ccaf302e2f7dd16b5ed5b30c5c0f0457496279de459d38711c02cd3ff5f953b3.png" /></a>
+<h3>Open TTD</h3>
+<a href="multiplay/ottd.html"><img alt="openttd server" class="main_banner" src="assets/pages/nachtbeere_openttd_logo-2baf7c89b9da1af74481546868f825d2be997f3cf7d66a20523e29425b65af40.png" /></a>
+<h3>Open RCT</h3>
+<a href="multiplay/orct.html"><img alt="openttd server" class="main_banner" src="assets/pages/nachtbeere_openrct_logo-462f685b0778c6e8283c2e252831021d7626a4ea7317520390b6d5abbb605ca0.png" /></a>
+
+      </article>
+    </div>
+  </main>
+</body>
+<footer class="uk-section">
+<div class="uk-text-center uk-padding uk-padding-remove-horizontal">
+  <span class="uk-text-small uk-text-muted">
+    ©2015-2020 밤딸기 플레이스. All rights reserved
+  </span>
+</div>
+</footer>
+</html>
